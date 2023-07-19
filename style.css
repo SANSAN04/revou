@@ -1,0 +1,68 @@
+.title {
+    font-size: 20px;
+    width: 650px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    width: 650px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.form {
+    background-color: #f7f7f7;
+    border-radius: none;
+    box-sizing: border-box;
+    height: 350px;
+    padding: 15px;
+    width: 650px;
+    text-align:justify;
+}
+
+.jenis_kelamin {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.berat_badan {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.usia {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.tinggi_badan {
+    padding: 5px;
+    font-weight: bold;
+}
+
+#button_hitung_bmi {
+    text-align: center;
+    color: white;
+    background-color: rgb(134, 204, 228);
+    width: 100px;
+    height: 40px;
+    border-style: none;
+    border-radius: 4px;
+    font-size: medium;
+    font-weight: bold;
+}
+#button_reset {
+    text-align: center;
+    background-color: white;
+    width: 70px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.input {
+    width: 100%;
+}
