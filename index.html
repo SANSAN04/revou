@@ -3,33 +3,41 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kalkulator BMI</title>
 </head>
 <body>
+
     <div class="title">Kalkulator BMI</div>
-        <div class="subtitle">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang 
-        penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu?
-        Yuk, hitung sekarang di kalkulator BMI.</div>
-
-<div class="form">
-    <div class="jenis_kelamin">Jenis Kelamin</div>
-    <input type="radio" id="Pria" name="jenis_kelamin" value="Pria">Pria
-    <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita">Wanita
+    <div class="subtitle">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang 
+     penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu?
+    Yuk, hitung sekarang di kalkulator BMI.</div><br>
+        
+    <div class="formBMI">
+<form>
+    <label for="jenisKelamin" class="jenisKelamin">Jenis Kelamin</label><br>
+    <input type="radio" id="jenisKelamin" name="jenisKelamin" value="Pria">Pria
+    <input type="radio" id="jenisKelamin" name="jenisKelamin" value="Wanita">Wanita
 <p>
-    <div class="berat_badan">Berat Badan (kg)</div>
-    <input class="input" type="number" id="berat_badan" name="berat_badan">
+    <label for="beratBadan" class="jenisKelamin">Berat Badan (Kg)</label><br>
+    <input type="number" id="beratBadan" name="beratBadan" placeholder="Berat Badan">
 </p>
-<p>
-    <div class="usia">Usia (tahun)</div>
-    <input class="input" type="number" id="usia" name="usia">
-</p>   
-    <div class="tinggi_badan">Tinggi Badan (cm)</div>
-    <input class="input" type="number" id="tinggi_badan" name="tinggi_badan">
-<p><br>
-    <button type="button" id="button_hitung_bmi">Hitung BMI</button>
-    <button type="button" id="button_reset">Reset</button>
-</p>
-</div>
 
+<p>
+    <label for="usia" class="usia">Usia (Tahun)</label><br>
+    <input type="number" id="usia" placeholder="Usia">
+</p>
+
+    <label for="tinggiBadan" class="tinggiBadan">Tinggi Badan (Cm)</label><br>
+    <input type="number" id="tinggiBadan" name="tinggiBadan" placeholder="Tinggi Badan">
+
+<p>
+    <button type="submit" id="hitungBMI">Hitung BMI</button>
+    <button type="reset" id="reset">Reset</button>
+</p>
+</form>
+<br><br>
+<label for="bmi-output" class="hasil">Hasil</label><br>
+<input type="text" id="bmi-output" class="hasilBMI">
+<script src="script.js"></script>
 </body>
 </html>

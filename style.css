@@ -2,67 +2,66 @@
     font-size: 20px;
     width: 650px;
     font-weight: bold;
-    padding: 10px;
+    line-height: 50px;
 }
 
 .subtitle {
     font-size: 16px;
     width: 650px;
-    padding: 10px;
     text-align: justify;
+    line-height: 20px;
 }
 
-.form {
-    background-color: #f7f7f7;
+.formBMI {
+    background-color: #80ecfa;
     border-radius: none;
     box-sizing: border-box;
     height: 350px;
     padding: 15px;
-    width: 650px;
+    width: 50%;
     text-align:justify;
 }
 
-.jenis_kelamin {
-    padding: 5px;
+.jenisKelamin {
     font-weight: bold;
+    line-height: 30px;
 }
 
-.berat_badan {
-    padding: 5px;
+.beratBadan {
     font-weight: bold;
+    line-height: 30px;
+}
+
+#beratBadan {
+    width: 100%;
 }
 
 .usia {
-    padding: 5px;
     font-weight: bold;
+    line-height: 30px;
 }
 
-.tinggi_badan {
-    padding: 5px;
-    font-weight: bold;
-}
-
-#button_hitung_bmi {
-    text-align: center;
-    color: white;
-    background-color: rgb(134, 204, 228);
-    width: 100px;
-    height: 40px;
-    border-style: none;
-    border-radius: 4px;
-    font-size: medium;
-    font-weight: bold;
-}
-#button_reset {
-    text-align: center;
-    background-color: white;
-    width: 70px;
-    height: 40px;
-    border-radius: 4px;
-    font-size: medium;
-    font-weight: bold;
-}
-
-.input {
+#usia {
     width: 100%;
+}
+
+.tinggiBadan {
+    font-weight: bold;
+    line-height: 30px;
+}
+
+#tinggiBadan {
+    width: 100%;
+}
+
+.hasil {
+    font-size: 20px;
+    width: 650px;
+    font-weight: bold;
+    line-height: 50px;
+
+.hasilBMI {
+    font-weight: bold;
+    line-height: 30px;
+    border: none;
 }
