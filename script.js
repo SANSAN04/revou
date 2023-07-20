@@ -25,22 +25,22 @@ function countBmi(){
   form.reset();
   var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
       
-  var result = '';
+  var kondisiBMI = '';
   if(bmi<18.5){
-    result = 'Kekurangan Berat Badan';
+    kondisiBMI = 'Kekurangan Berat Badan';
      }else if(18.5<=bmi&&bmi<=24.9){
-    result = 'Normal (Ideal)';
+    kondisiBMI = 'Normal (Ideal)';
      }else if(25<=bmi&&bmi<=29.9){
-    result = 'Kelebihan Berat Badan';
+    kondisiBMI = 'Kelebihan Berat Badan';
      }else if(30<=bmi&&bmi<=34.9){
-    result = 'Kegemukan (Obesitas';
+    kondisiBMI = 'Kegemukan (Obesitas';
      }
   
   var h1 = document.createElement("h1");
   var h2 = document.createElement("h2");
 
-  var t = document.createTextNode(result);
-  var b = document.createTextNode('');
+  var t = document.createTextNode(kondisiBMI);
+  var b = document.createTextNode(' ');
   var r = document.createTextNode(parseFloat(bmi).toFixed(2));
   
   h1.appendChild(t);
