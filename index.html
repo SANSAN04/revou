@@ -1,43 +1,62 @@
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator BMI</title>
-</head>
-<body>
+    <head>
+        <link rel="stylesheet" href="style.css">
+      </head>
+      <body>
+        <div class="title">Kalkulator BMI</div>
+        <div class="subtitle">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang 
+        penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu?
+        Yuk, hitung sekarang di kalkulator BMI.</div>
 
-    <div class="title">Kalkulator BMI</div>
-    <div class="subtitle">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang 
-     penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu?
-    Yuk, hitung sekarang di kalkulator BMI.</div><br>
-        
-    <div class="formBMI">
-<form>
-    <label for="jenisKelamin" class="jenisKelamin">Jenis Kelamin</label><br>
-    <input type="radio" id="jenisKelamin" name="jenisKelamin" value="Pria">Pria
-    <input type="radio" id="jenisKelamin" name="jenisKelamin" value="Wanita">Wanita
-<p>
-    <label for="beratBadan" class="jenisKelamin">Berat Badan (Kg)</label><br>
-    <input type="number" id="beratBadan" name="beratBadan" placeholder="Berat Badan">
-</p>
+      <form class="formBMI" id="form" onsubmit="return validateForm()">
 
-<p>
-    <label for="usia" class="usia">Usia (Tahun)</label><br>
-    <input type="number" id="usia" placeholder="Usia">
-</p>
+            <p class="jenisKelamin">Jenis Kelamin</p>
+            <input class="radioJenkel" type="radio" name="radio" id="female">Wanita
+            <input class="radioJenkel" type="radio" name="radio" id="male">Pria
 
-    <label for="tinggiBadan" class="tinggiBadan">Tinggi Badan (Cm)</label><br>
-    <input type="number" id="tinggiBadan" name="tinggiBadan" placeholder="Tinggi Badan">
+            <p class="beratBadan">Berat Badan (Kg)</p>
+            <input type="number" class="formInput" id="weight" autocomplete="off" required>
+    
+            <p class="usia">Usia</p>
+            <input type="number" class="formInput" id="age" autocomplete="off" required>
+            
+            <p class="tinggiBadan">Tinggi Badan (Cm)</p>
+            <input type="number" class="formInput" id="height" autocomplete="off" required>
 
-<p>
-    <button type="submit" id="hitungBMI">Hitung BMI</button>
-    <button type="reset" id="reset">Reset</button>
-</p>
-</form>
-<br><br>
-<label for="bmi-output" class="hasil">Hasil</label><br>
-<input type="text" id="bmi-output" class="hasilBMI">
-<script src="script.js"></script>
-</body>
+      <br><br><br>
+      <button class="buttonSubmit" type="button" id="submit">Hitung BMI</button>
+      <button class="buttonReset" type="reset" id="submit">Reset</button>
+
+      <br><br><br><br><br><br><br><br><br><br>
+      <button class="otherButton" type="button" id="submit">Download Hasil BMI</button>
+      <div><br>Hasil BMI diantara 23 dan 25<br> 
+          Anda berada dalam kategori overweight atau berat badan berlebih.
+          Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makan yang
+          dikonsumsi dan berolahraga.
+          Jika BMI Anda  berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan
+          hingga batas normal.
+      </div><br>
+      <button class="otherButton" type="button" id="submit">Konsultasi Ahli Gizi Via Aplikasi</button>
+      <button class="otherButton" type="button" id="submit">Registrasi Online</button>
+      <div><br>
+          BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit
+          seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan
+          bertat badan Anda.
+        </div>
+
+        <div>
+          <h3>Beberapa penyakit yang berasal dari kegemukan</h3>
+          Diabetes<br>
+          Hipertensi<br>
+          Sakit Jantung<br>
+          Osteoarthritis<br>
+        </div><br>
+        <button class="otherButton" type="button" id="submit">Konsultasi Ahli Gizi Via Aplikasi</button>
+        <button class="otherButton" type="button" id="submit">Registrasi Online</button>
+        <div><br>
+        </div>
+      </form>
+
+      <script src="script.js"></script>
+      </body>
 </html>
