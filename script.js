@@ -1,36 +1,55 @@
-var hitungBMI = document.getElementById("hitungBMI");
-    
-    hitungBMI.addEventListener("click", function (event){
-        event.preventDefault();
-        var jenisKelaminValue = document.getElementById("jenisKelamin").value
-        var beratBadanValue = document.getElementById("beratBadan").value
-        var usiaValue = document.getElementById("usia").value
-        var tinggiBadanValue = document.getElementById("tinggiBadan").value
+var male = document.getElementById("male");
+var female = document.getElementById("female");
+var weight = document.getElementById("weight");
+var age = document.getElementById("age");
+var height = document.getElementById("height");
+var form = document.getElementById("form");
 
-        var finalbmi = (beratBadanValue / (tinggiBadanValue * tinggiBadanValue) * 10000);
-        document.getElementById('bmi-output').value = finalbmi;
-
-        if (finalbmi < 18.5 ) {
-            console.log(finalbmi + "Kekurangan Berat Badan")
-        }
-        else if (finalbmi > 18.5 && finalbmi < 24.9) {
-            console.log(finalbmi + "Normal(Ideal)")
-        }
-        else if (finalbmi > 25.0 && finalbmi < 29.9) {
-            console.log(finalbmi + "Kelebihan Berat Badan")
-        }
-        else if (finalbmi > 30.0) {
-            console.log(finalbmi + "Kegemukan(Obesitas)")
-        }
+function validateForm(){
+  if(age.value=='' || height.value=='' || weight.value=='' || (male.checked==false && female.checked==false)){
+    alert("Semua Form Harus Di Isi !!!");
+    document.getElementById("submit").removeEventListener("click", countBmi);
+  }else{
+    countBmi();
+  }
 }
-    )
+document.getElementById("submit").addEventListener("click", validateForm);
 
-//function bmi-output {
-  //  document.getElementById('bmi-output').value = finalbmi;
-//}
-//function tampilHasilBMI (jenisKelamin, beratBadan, usia, tinggiBadan) {
-   // var  jenisKelaminOutput = document.getElementById("jenisKelaminOutput")
-   // jenisKelaminOutput.textContent = jenisKelamin
-   // var  beratBadanOutput = document.getElementById("beratBadanOutput")
-   // beratBadanOutput.textContent = beratBadan
-// };
+function countBmi(){
+  var p = [age.value, height.value, weight.value];
+  if(male.checked){
+    p.push("male");
+  }else if(female.checked){
+    p.push("female");
+  }
+  form.reset();
+  var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
+      
+  var result = '';
+  if(bmi<18.5){
+    result = 'Kekurangan Berat Badan';
+     }else if(18.5<=bmi&&bmi<=24.9){
+    result = 'Normal (Ideal)';
+     }else if(25<=bmi&&bmi<=29.9){
+    result = 'Kelebihan Berat Badan';
+     }else if(30<=bmi&&bmi<=34.9){
+    result = 'Kegemukan (Obesitas';
+     }
+  
+  var h1 = document.createElement("h1");
+  var h2 = document.createElement("h2");
+
+  var t = document.createTextNode(result);
+  var b = document.createTextNode('');
+  var r = document.createTextNode(parseFloat(bmi).toFixed(2));
+  
+  h1.appendChild(t);
+  h2.appendChild(b);
+  h2.appendChild(r);
+  
+  document.body.appendChild(h1);
+  document.body.appendChild(h2);
+  document.getElementById("submit").removeEventListener("click", countBmi);
+  document.getElementById("submit").removeEventListener("click", validateForm);
+}
+document.getElementById("submit").addEventListener("click", countBmi);
